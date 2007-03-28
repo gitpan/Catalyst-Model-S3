@@ -5,7 +5,7 @@ use Module::Build;
 
 my $builder = Module::Build->new(
     add_to_cleanup     => [qw/ Catalyst-Model-S3-*
-                                Catalyst-Helper-Model-S3-* /],
+                               Catalyst-Helper-Model-S3-* /],
     build_requires     => {
         'Test::More' => '0',
     },

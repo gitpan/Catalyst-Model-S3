@@ -10,7 +10,7 @@ use Catalyst::Utils ();
 use Class::C3 ();
 use Net::Amazon::S3 ();
 
-our $VERSION = '0.02';
+our $VERSION = '0.03';
 
 
 =head1 NAME
@@ -81,6 +81,7 @@ sub new {
     return $self;
 }
 
+
 =head2 ACCEPT_CONTEXT
 
 Return the L<Net::Amazon::S3> object. Called automatically via
@@ -147,7 +148,7 @@ You may also look for information at:
 
 =item * Catalyst::Model::S3
 
-L<http://perlprogrammer.co.uk/module/Catalyst::Model::S3/>
+L<http://perlprogrammer.co.uk/modules/Catalyst::Model::S3/>
 
 =item * AnnoCPAN: Annotated CPAN documentation
 

@@ -1,6 +1,6 @@
 ---
 name: Catalyst-Model-S3
-version: 0.02
+version: 0.03
 author:
   - 'Dave Cardwell <dcardwell@cpan.org>'
 abstract: Catalyst model for Amazon's S3 web service
@@ -21,7 +21,7 @@ provides:
     version: 0.01
   Catalyst::Model::S3:
     file: lib/Catalyst/Model/S3.pm
-    version: 0.02
+    version: 0.03
 generated_by: Module::Build version 0.2807
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.2.html
