@@ -6,40 +6,40 @@ use warnings;
 use base qw/ Catalyst::Model /;
 
 use Carp qw( croak );
-use Catalyst::Utils;
-use Class::C3;
-use Net::Amazon::S3;
+use Catalyst::Utils ();
+use Class::C3 ();
+use Net::Amazon::S3 ();
 
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 
 
 =head1 NAME
 
-Catalyst::Model::S3 - Catalyst Model for Amazon's S3 web service
+Catalyst::Model::S3 - Catalyst model for Amazon's S3 web service
 
 
 =head1 SYNOPSIS
 
     # Use the helper to add an S3 model to your application...
     script/myapp_create.pl create model S3 S3
-
-
+    
+    
     # lib/MyApp/Model/S3.pm
-
+    
     package MyApp::Model::S3;
-
+    
     use base qw/ Catalyst::Model::S3 /;
-
+    
     __PACKAGE__->config(
         aws_access_key_id     => 'your_access_key_id',
         aws_secret_access_key => 'your_secret_access_key',
         secure                => 0,  # optional: default 0  (false)
         timeout               => 30, # optional: default 30 (seconds)
     );
-
+    
     1;
-
-
+    
+    
     # In a controller...
     my $s3 = $c->model('S3');
     print ref($s3);  # Net::Amazon::S3
@@ -54,9 +54,9 @@ methods available. For more on S3 visit: L<http://aws.amazon.com/s3>
 
 =head1 METHODS
 
-=head2 new
+=head2 ->new()
 
-Instantiate a new S3 Model. See
+Instantiate a new L<Net::Amazon::S3> Model. See
 L<Net::Amazon::S3's new method|Net::Amazon::S3/new> for the options available.
 
 =cut
@@ -83,7 +83,8 @@ sub new {
 
 =head2 ACCEPT_CONTEXT
 
-Return the Net::Amazon::S3 object. Called automatically via $c->model('S3');
+Return the L<Net::Amazon::S3> object. Called automatically via
+C<$c-E<gt>model('S3');>
 
 =cut
 
@@ -92,6 +93,9 @@ sub ACCEPT_CONTEXT {
 }
 
 
+1; # End of the module code; everything from here is documentation...
+__END__
+
 =head1 SEE ALSO
 
 L<Catalyst>, L<Catalyst::Helper::Model::S3>, L<Net::Amazon::S3>
@@ -99,13 +103,23 @@ L<Catalyst>, L<Catalyst::Helper::Model::S3>, L<Net::Amazon::S3>
 
 =head1 DEPENDENCIES
 
-Catalyst::Model::S3 requires the following modules:
-
 =over
 
 =item
 
-L<Catalyst>
+L<Carp>
+
+=item
+
+L<Catalyst::Model>
+
+=item
+
+L<Catalyst::Utils>
+
+=item
+
+L<Class::C3>
 
 =item
 
@@ -154,6 +168,7 @@ L<http://search.cpan.org/dist/Catalyst-Model-S3/>
 
 Dave Cardwell <dcardwell@cpan.org>
 
+
 =head1 COPYRIGHT AND LICENSE
 
 Copyright (c) 2007 Dave Cardwell. All rights reserved.
@@ -161,7 +176,5 @@ Copyright (c) 2007 Dave Cardwell. All rights reserved.
 This module is free software; you can redistribute it and/or modify it under
 the same terms as Perl itself. See L<perlartistic>.
 
+
 =cut
-
-
-1;

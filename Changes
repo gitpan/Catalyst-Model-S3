@@ -1,4 +1,10 @@
-Revision history for Catalyst-Model-S3
+Revision history for Catalyst::Model::S3
 
-0.01  2007-03-07:
-      Initial release.
+0.02	2007-03-28:
+		Tidied up distribution:
+			* Improved documentation
+			* Tidied up testing
+			* Fixed dependencies in Makefile.pl
+
+0.01    2007-03-07:
+		Initial release.

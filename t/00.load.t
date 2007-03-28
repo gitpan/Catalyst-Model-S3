@@ -1,7 +1,11 @@
+#!perl -wT
+
+use strict;
+use warnings;
+
 use Test::More tests => 1;
 
-BEGIN {
-    use_ok( 'Catalyst::Model::S3' );
-}
+use_ok( 'Catalyst::Model::S3' );
 
-diag( "Testing Catalyst::Model::S3 $Catalyst::Model::S3::VERSION" );
+diag( 'Testing Catalyst::Model::S3 '
+            . $Catalyst::Model::S3::VERSION );

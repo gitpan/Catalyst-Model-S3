@@ -10,7 +10,7 @@ __PACKAGE__->config(
     'Model::S3' => {
         aws_access_key_id     => 'fake key',
         aws_secret_access_key => 'fake secret'
-    }
+    },
 );
 
 __PACKAGE__->setup;

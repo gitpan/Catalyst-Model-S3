@@ -10,7 +10,7 @@ our $VERSION = '0.01';
 
 =head1 NAME
 
-Catalyst::Helper::Model::S3 - Helper for S3 Catalyst Models
+Catalyst::Helper::Model::S3 - Helper for S3 Catalyst models
 
 
 =head1 SYNOPSIS
@@ -41,7 +41,7 @@ application.
 
 =head2 mk_compclass
 
-This method takes the given arguments and generates an Catalyst::Model::S3
+This method takes the given arguments and generates a Catalyst::Model::S3
 model for your application.
 
 =cut
@@ -120,6 +120,7 @@ L<http://search.cpan.org/dist/Catalyst-Model-S3/>
 =head1 AUTHOR
 
 Dave Cardwell <dcardwell@cpan.org>
+
 
 =head1 COPYRIGHT AND LICENSE
 
